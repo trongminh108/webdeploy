@@ -8,7 +8,17 @@ function BookList() {
     if (error) return <div>Error: {error.message}</div>;
     if (data) console.log(data);
 
-    return <div>BookList</div>;
+    return (
+        <div>
+            {data.books.map((book: any, index: number) => (
+                <>
+                    <div key={index}>
+                        <div>{book.name}</div>
+                    </div>
+                </>
+            ))}
+        </div>
+    );
 }
 
 export default BookList;
