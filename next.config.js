@@ -2,14 +2,10 @@
 const nextConfig = {
     output: 'export',
     basePath: '/webdeploy',
-    pageExtensions: [
-        'page.tsx',
-        'page.ts',
-        'page.jsx',
-        'page.js',
-        'page.md',
-        'page.mdx',
-    ],
+    experimental: {
+        runtime: 'experimental-edge',
+        appDir: true,
+    },
 };
 
 module.exports = nextConfig;
