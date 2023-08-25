@@ -1,5 +1,5 @@
-import { getAllBooks } from "@/apollo-client/queries";
-import { useQuery } from "@apollo/client";
+import { getAllBooks } from '@/apollo-client/queries';
+import { useQuery } from '@apollo/client';
 
 function BookList() {
     const { loading, error, data } = useQuery(getAllBooks);
@@ -11,11 +11,9 @@ function BookList() {
     return (
         <div>
             {data.books.map((book: any, index: number) => (
-                <>
-                    <div key={index}>
-                        <div>{book.name}</div>
-                    </div>
-                </>
+                <div key={index}>
+                    <div>{book.name}</div>
+                </div>
             ))}
         </div>
     );
