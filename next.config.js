@@ -2,7 +2,7 @@
 const nextConfig = {
     // output: 'export',
     output: {
-        value: 'server',
+        value: 'export',
     },
     experimental: {
         appDir: true,
